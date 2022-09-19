@@ -7,14 +7,11 @@ public class PlayerControl : MonoBehaviour
     float forwardInput;
     float horizontalInput;
     public float speed = 15;
-    private Vector3 mousePos;
-    float rotationspeed = 10;
-    public GameObject pointer;
-    public Vector2 turn;
+    private Rigidbody playerRb;
    
     void Start()
     {
-        
+        playerRb = GetComponent<Rigidbody>();
     }
     
     void Update()
@@ -30,5 +27,6 @@ public class PlayerControl : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
 }
